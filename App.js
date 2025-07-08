@@ -1,38 +1,18 @@
-/*
-// Print heading using React
-const heading = React.createElement("h1", {
-    id: "heading"
-}, "Hello World!");
-const root = ReactDOM.createRoot(document.getElementById("root"));
-console.log(heading);
-root.render(heading);
-*/
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 /*
-// Print nested elements using React
-const parent = React.createElement("div", {
-    id: "parent"
-}, React.createElement("div", {
-    id: "child"
-}, [React.createElement("h1", {}, "I'm h1"), React.createElement("h2", {}, "I'm h2")]));
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
-*/
+const heading = React.createElement("h1", {}, "Namaste Javascript 🚀");
 
-// Print nested elements using React
-const parent = React.createElement("div", {id: "parent"}, 
-    [    
-        React.createElement("div", {id: "child-one"}, 
-            [
-                React.createElement("h1", {}, "I'm h1"), React.createElement("h2", {}, "I'm h2")
-            ]
-        ),
-        React.createElement("div", {id: "child-two"}, 
-            [
-                React.createElement("h1", {}, "I'm h1"), React.createElement("h2", {}, "I'm h2")
-            ]
-        )
-    ]
+const NestedHeading = React.createElement("div", {className: "container"}, 
+    React.createElement("h1", {className: "heading"}, "Namaste Javascript 🚀")
 );
+*/
+
+
+const NestedHeading = () => (
+    <h1>Namaste Javascript 🚀</h1>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<NestedHeading />);
